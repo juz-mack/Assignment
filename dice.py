@@ -6,13 +6,13 @@ import sys
 import random as rnd
 
 def get_numbers_argv():
-    first_num = int(sys.argv[1])
-    second_num = int(sys.argv[2])
+    first_num = int(sys.argv[1])  #this will be dice type, d2,d6 etc
+    second_num = int(sys.argv[2]) #this will change to number of dice to roll
     return (first_num,second_num)
 
 def get_numbers_input():
-    first_num = int(input("Number of sides > "))
-    second_num = int(input("Number of rolls > "))
+    first_num = int(input("Number of sides > "))  #dice type, d2,d6 etc
+    second_num = int(input("Number of rolls > ")) #change to number of dice to roll
     return (first_num,second_num)
 
 def roll_dice(sides):
