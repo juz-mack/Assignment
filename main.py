@@ -9,14 +9,15 @@ import dice
 dice_type = "Coin"
 
 
-def select_face_option(event):
+def select_face_option(event): #used when you select dice type
     global dice_type  # use global var named dice_type
     ...  # replace with your own code
+    #dice.roll_dice()
 
 
-def roll_all_dice(event):
+def roll_all_dice(event): #called when you press the sbmit button
     global dice_type  # use global var named dice_type
-    ...  # replace with your own code
+    dice.roll_dice()
 
 
 def clear_history(event):
