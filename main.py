@@ -17,9 +17,8 @@ def select_face_option(event): #used when you select dice type
 
 def roll_all_dice(event): #called when you press the sbmit button
     global dice_type  # use global var named dice_type
-    print("Test")
-
+    document.querySelector("div#roll-history").innerHTML = "Test"
 
 def clear_history(event):
     # this finds the div tag with id attribute 'roll-history' and clears whatever is inside
-    document.querySelector("div#roll-history").innerHTML = ""
+    document.querySelector("div#roll-history").innerHTML = ""  #DOM
