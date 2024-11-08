@@ -29,12 +29,11 @@
         <!-- Start of your code -->
         <!-- Add Roll Code here -->
 
-        <h1>Virtual Dice Roller</h1>
-        <p class="some_class">Welcome to Dice Roller!</p>
+        <h1>Virtual Dice Roller</h1> <!--Insert image after heading?-->
+        <p class="some_class">Welcome to Dice Roller!</p> 
         <p id="some_id">You can select the type of dice and how many you'd like to roll below.</p>
         <p id="some_id">Once you have your results, click the Clear button to start again.</p>
         <br><br>
-
 
         <form>
             <label for="dice_type">Choose a dice:</label>
@@ -52,8 +51,9 @@
 
                 <label for="num_roll">Enter Number of Dice to Roll:</label>
                 <input type="text" id="num_roll" name="num_roll"><br><br>
-                <input type="submit" value="Submit"> <!--need to add onclick event to button-->
+                <input type="submit" value="Submit" pyclick="roll_all_dice"> <!--need to add onclick event to button-->
         </form>     
+
 
         <!--Need to add results under here and a button to clear results-->
 
