@@ -33,21 +33,21 @@
         <p class="some_class">test 1</p>
         <p id="some_id">test 2</p>
 
-        <label for="dice_type">Choose a dice:</label>
-
-        <select name="dice" id="dice">
-            <option value="coin">Coin</option>
-            <option value="d6">d6</option>
-            <option value="d8">d8</option>
-            <option value="d10">d10</option>
-            <option value="d20">d20</option>
-            <option value="d100">d100</option>
-        </select>
-
         <form>
+            <label for="dice_type">Choose a dice:</label>
+        
+            <select name="dice" id="dice">
+                <option value="coin">Coin</option>
+                <option value="d6">d6</option>
+                <option value="d8">d8</option>
+                <option value="d10">d10</option>
+                <option value="d20">d20</option>
+                <option value="d100">d100</option>
+            </select>
+
             <label for="num_roll">Enter Number of Dice to Roll:</label><br>
             <input type="text" id="num_roll" name="num_roll"><br><br>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit"> <!--need to add onclick event to button-->
         </form>     
 
 
