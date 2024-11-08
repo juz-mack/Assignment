@@ -17,7 +17,7 @@ def select_face_option(event): #used when you select dice type
 
 def roll_all_dice(event): #called when you press the sbmit button
     global dice_type  # use global var named dice_type
-    dice.roll_dice()
+    print("Test")
 
 
 def clear_history(event):
