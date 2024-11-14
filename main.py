@@ -11,14 +11,18 @@ dice_type = "Coin"
 
 def select_face_option(event): #used when you select dice type
     global dice_type  # use global var named dice_type
-    
+
+    dice_type = document.getElementById("dice").value
+    print(dice_type)
+
     #x = document.getElementbyId("dice").value 
     #document.getElementbyId("dice").value - store as a variable and then store that value in dice_type
     #run if function
-    #if(dice_type = 2)
+    #if dice_type =
 
 
-def roll_all_dice(event): #called when you press the sbmit button
+
+def roll_all_dice(event): #called when you press the submit button
     global dice_type  # use global var named dice_type
 
 #add function to figure out output
