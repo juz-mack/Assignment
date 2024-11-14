@@ -7,12 +7,12 @@ import dice
 # GLOBAL (script-wide) variable
 # this stores the selected face option from the drop-down list
 dice_type = "Coin"
-#x = dice_type
+
 
 def select_face_option(event): #used when you select dice type
     global dice_type  # use global var named dice_type
     
-    x = document.getElementbyId("dice").value 
+    #x = document.getElementbyId("dice").value 
     #document.getElementbyId("dice").value - store as a variable and then store that value in dice_type
     #run if function
     #if(dice_type = 2)
