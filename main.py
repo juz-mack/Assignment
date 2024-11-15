@@ -7,7 +7,7 @@ import dice
 # GLOBAL (script-wide) variable
 # this stores the selected face option from the drop-down list
 dice_type = "Coin"
-roll_num = "document.getElementById("num_roll").innerHTML"
+
 #roll_dice(sides) = dice_num
 
 def select_face_option(event): #used when you select dice type
