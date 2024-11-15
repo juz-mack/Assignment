@@ -45,7 +45,7 @@ def roll_all_dice(event): #called when you press the submit button
 
     #for function?
 
-    output = "num"
+    output = num
     document.querySelector("div#roll-history").innerHTML = output
 
     print(output)
