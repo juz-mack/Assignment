@@ -1,3 +1,4 @@
+import output
 from pyscript import document  # webpage module links
 # your roll_dice function should be saved in a file named 'dice.py'
 # uncomment the next line when you have this prepared
@@ -6,54 +7,39 @@ import dice
 # GLOBAL (script-wide) variable
 # this stores the selected face option from the drop-down list
 # this section seems wrong?
-dice_type = int("Coin")
-roll_num = int(1)
+dice_type = 2
 
 
 
 def select_face_option(event): #used when you select dice type
     global dice_type  # use global var named dice_type
-    global roll_num
-
-
-
-    dice_type = document.getElementById("dice").value
-    if dice_type == "Coin":
-        value = 2
-    elif dice_type == "d6":
-        value = 6
-    elif dice_type == "d8":
-        value = 8
-    elif dice_type == "d10":
-        value = 10
-    elif dice_type == "d20":
-        value = 20
-    elif dice_type == "d100":
-        value = 100
-
-    roll_num = document.getElementById("num_roll").value
-
-    #run "dice"
+    value = document.getElementById("dice").value
+    if value == "Coin":
+        dice_type = 2
+    elif value == "d6":
+        dice_type = 6
+    elif value == "d8":
+        dice_type = 8
+    elif value == "d10":
+        dice_type = 10
+    elif value == "d20":
+        dice_type = 20
+    elif value == "d100":
+        dice_type = 100
 
 
 def roll_all_dice(event): #called when you press the submit button
     global dice_type  # use global var named dice_type
-    global roll_num
-    sides = dice_type
-    #get roll count from input box
-    dice.roll_dice(sides)
+    num_roll = document.getElementById("num_roll").value
+    output = "Here are your rolls: "
 
-    ...
+    for roll in range(dice_type + num_roll):
+    #for loop goes here V dice roll and output needs to be collated
+        roll_result = dice.roll_dice(dice_type)
+        output = output + str(roll_result) + ", "
 
-#add function to figure out output
 
-
-    #for function?
-
-    output = "num"
     document.querySelector("div#roll-history").innerHTML = output
-
-    #print(output)
 
 def clear_history(event):
     # this finds the div tag with id attribute 'roll-history' and clears whatever is inside
