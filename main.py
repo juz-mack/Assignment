@@ -28,11 +28,10 @@ def select_face_option(event): #used when you select dice type
 
 def roll_all_dice(event): #called when you press the submit button
     global dice_type  # use global var named dice_type
-    num_roll = document.getElementById("num_roll").value
+    num_roll = int(document.getElementById("num_roll").value)
     output = "Here are your rolls: "
 
     for _ in range(num_roll):
-    #for loop goes here V dice roll and output needs to be collated
         roll_result = dice.roll_dice(dice_type)
         output = output + str(roll_result) + ", "
         print(output)
