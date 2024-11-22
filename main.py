@@ -36,8 +36,9 @@ def roll_all_dice(event): #called when you press the submit button
         seperator = ", "
         print(roll_number)
         print(num_roll)
-        if roll_result == num_roll:
+        if roll_number == num_roll - 1:
             seperator = ""
+            print("Test")
         output = output + str(roll_result) + seperator
         print(output)
 
