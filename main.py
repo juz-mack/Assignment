@@ -1,4 +1,3 @@
-import output
 from pyscript import document  # webpage module links
 # your roll_dice function should be saved in a file named 'dice.py'
 # uncomment the next line when you have this prepared
@@ -30,15 +29,15 @@ def select_face_option(event): #used when you select dice type
 def roll_all_dice(event): #called when you press the submit button
     global dice_type  # use global var named dice_type
     num_roll = document.getElementById("num_roll").value
-    output = "Here are your rolls: "
+    out = "Here are your rolls: "
 
     for _ in range(num_roll):
     #for loop goes here V dice roll and output needs to be collated
         roll_result = dice.roll_dice(dice_type)
-        output = output + str(roll_result) + ", "
+        out = out + str(roll_result) + ", "
         print(output)
 
-    document.querySelector("div#roll-history").innerHTML = output
+    document.querySelector("div#roll-history").innerHTML = out
 
 def clear_history(event):
     # this finds the div tag with id attribute 'roll-history' and clears whatever is inside
