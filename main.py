@@ -34,6 +34,8 @@ def roll_all_dice(event): #called when you press the submit button
     for roll_number in range(num_roll):
         roll_result = dice.roll_dice(dice_type)
         seperator = ", "
+        print(roll_number)
+        print(num_roll)
         if roll_result == num_roll:
             seperator = ""
         output = output + str(roll_result) + seperator
