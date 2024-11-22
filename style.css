@@ -1,7 +1,15 @@
-p.some_class { 
+body {
+    font-family:Arial   , sans-serif; text-align: center; background-color: antiquewhite;
+}
+
+h1 {
+    color: crimson;
+}
+
+p.some_class {
     font-size: 20px;
 }
 
 #some_id {
-    font-weight: bold;
+    font-weight: bold; font-size: 15px;
 }
