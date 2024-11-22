@@ -29,16 +29,17 @@
         <!-- Start of your code -->
         <!-- Add Roll Code here -->
 
-        <h1 style="color:darkred;">Virtual Dice Roller</h1> <!--Insert image after heading?-->
+        <h1>Virtual Dice Roller</h1> <!--Insert image after heading?-->
         <p class="some_class">Welcome to Dice Roller!</p> 
         <p id="some_id">You can select the type of dice and how many you'd like to roll below.</p>
         <p id="some_id">Once you have your results, click the Clear button to start again.</p>
         <br><br>
 
         <form>
+            <!--suppress XmlInvalidId -->
             <label for="dice_type">Choose a dice:</label>
         
-            <select name="dice" id="dice" py-change="select_face_option"> <!--added the py-change-->
+            <select name="dice" id="dice" py-change="select_face_option">
                 <option value="coin">Coin</option>
                 <option value="d6">d6</option>
                 <option value="d8">d8</option>
@@ -56,7 +57,10 @@
 
         <div id="roll-history"></div>
 
-            <!--print(roll_all_dice)-->
+            <button type="button" py-click="clear_history">Clear Results</button>
+
+
+
 
 
         <!--Need to add results under here and a button to clear results-->
