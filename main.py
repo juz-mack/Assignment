@@ -38,7 +38,7 @@ def roll_all_dice(event): #called when you press the submit button
         roll_result = dice.roll_dice(dice_type)
         output = output + str(roll_result) + ", "
 
-
+    print(output)
     document.querySelector("div#roll-history").innerHTML = output
 
 def clear_history(event):
