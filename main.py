@@ -1,27 +1,20 @@
 from pyscript import document  # webpage module links
 # your roll_dice function should be saved in a file named 'dice.py'
 # uncomment the next line when you have this prepared
-# import dice
-# why was above not linking when untagged?
-import random as rnd
-def roll_dice(sides):
-    num = rnd.randint(1, sides)
-    return num
+import dice
 
 # GLOBAL (script-wide) variable
 # this stores the selected face option from the drop-down list
 # this section seems wrong?
 dice_type = int("Coin")
 roll_num = int(1)
-num = rnd.randint(roll_num,dice_type)
-sides = dice_type
+
 
 
 def select_face_option(event): #used when you select dice type
     global dice_type  # use global var named dice_type
     global roll_num
-    global roll_dice(sides) #what is this error?
-           sides = dice_type
+
 
 
     dice_type = document.getElementById("dice").value
@@ -38,7 +31,7 @@ def select_face_option(event): #used when you select dice type
     elif dice_type == "d100":
         value = 100
 
-    roll_num = document.getElementById("num_roll").innerHTML
+    roll_num = document.getElementById("num_roll").value
 
     #run "dice"
 
@@ -46,9 +39,9 @@ def select_face_option(event): #used when you select dice type
 def roll_all_dice(event): #called when you press the submit button
     global dice_type  # use global var named dice_type
     global roll_num
-    global roll_dice(sides) #what is this error?
-        sides = dice_type
+    sides = dice_type
     #get roll count from input box
+    dice.roll_dice(sides)
 
     ...
 
@@ -57,7 +50,7 @@ def roll_all_dice(event): #called when you press the submit button
 
     #for function?
 
-    output = "num" #not linking to dice.py?
+    output = "num"
     document.querySelector("div#roll-history").innerHTML = output
 
     #print(output)
