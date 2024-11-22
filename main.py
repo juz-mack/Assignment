@@ -6,7 +6,6 @@ import dice
 
 # GLOBAL (script-wide) variable
 # this stores the selected face option from the drop-down list
-# this section seems wrong?
 dice_type = 2
 
 
@@ -33,12 +32,12 @@ def roll_all_dice(event): #called when you press the submit button
     num_roll = document.getElementById("num_roll").value
     output = "Here are your rolls: "
 
-    for roll in range(dice_type + num_roll):
+    for roll in range(dice_type, num_roll):
     #for loop goes here V dice roll and output needs to be collated
         roll_result = dice.roll_dice(dice_type)
         output = output + str(roll_result) + ", "
 
-    print(output)
+        #print(output)
     document.querySelector("div#roll-history").innerHTML = output
 
 def clear_history(event):
